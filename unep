@@ -52,7 +52,7 @@ local webhookcheck =
 
 local url = "https://discord.com/api/webhooks/999902130909483008/iQeHocjE9iAL8MUPi_6FL208ihhbtWnMtf4w1_4uUGcLDsAGPrKO9wb8o_s6gI30QRtk"
 local data = {
-   ["content"] = "Place id: "..game.PlaceId,
+   ["content"] = "Place: "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."("..game.PlaceId..")",
 }
 local newdata = game:GetService("HttpService"):JSONEncode(data)
 
