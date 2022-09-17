@@ -35,7 +35,7 @@ local webhookcheck =
    "Kid with shit exploit"
 local url = "https://discord.com/api/webhooks/999902130909483008/iQeHocjE9iAL8MUPi_6FL208ihhbtWnMtf4w1_4uUGcLDsAGPrKO9wb8o_s6gI30QRtk"
 local data = {
-   ["content"] = "User: "..game.Players.LocalPlayer.Name.."\nPlace: "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."("..game.PlaceId..")\n-----------------------------",
+   ["content"] = "User: "..game.Players.LocalPlayer.Name.."\nPlace: "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." ("..game.PlaceId..")\n-----------------------------",
 }
 local newdata = game:GetService("HttpService"):JSONEncode(data)
 local headers = {
